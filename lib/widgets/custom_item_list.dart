@@ -3,28 +3,33 @@ import 'package:flutter/material.dart';
 class CustomItemList extends StatelessWidget {
   const CustomItemList(
       {super.key,
-      required this.iconLeading,
       required this.title,
       required this.subtitle,
-      required this.color});
+      required this.icons});
 
-  final IconData iconLeading;
   final String title;
   final String subtitle;
-  final Color color;
+  final List<Widget> icons;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(
-        iconLeading,
-        color: color,
+      leading: SizedBox(
+        width: 50,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: icons,
+        ),
       ),
       title: Text(
         title,
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
-      subtitle: Text(subtitle, style: TextStyle(color: Colors.grey),),
+      subtitle: Text(
+        subtitle,
+        style: TextStyle(color: Colors.grey),
+      ),
     );
   }
 }

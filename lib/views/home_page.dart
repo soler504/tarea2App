@@ -19,30 +19,68 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        const CustomItemList(
-          iconLeading: Icons.watch_later,
+        CustomItemList(
           title: 'Quick Creation',
           subtitle:
               'Simply type in your list, ask Siri, or add a reminder from your Calendar app',
-          color: Colors.green,
+          icons: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.watch_later, color: Colors.green),
+                Icon(Icons.photo_camera, color: Colors.green),
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.flag, color: Colors.green),
+                Icon(Icons.send, color: Colors.green),
+              ],
+            ),
+          ],
         ),
         const CustomItemList(
-          iconLeading: Icons.local_grocery_store,
           title: 'Grocery Shopping',
           subtitle:
               'Create a Grocery List that automatically sorts items you add by category',
-          color: Colors.orange,
+          icons: [
+            Icon(
+              Icons.local_grocery_store,
+              color: Colors.orange,
+              size: 40,
+            )
+          ],
         ),
         const CustomItemList(
-          iconLeading: Icons.people_sharp,
           title: 'Easy Sharing',
           subtitle: 'Collaborate on a list, and even assign individual tasks',
-          color: Colors.yellow,
+          icons: [
+            Icon(
+              Icons.people_sharp,
+              color: Colors.yellow,
+              size: 40,
+            )
+          ],
         ),
         const CustomItemList(
-            iconLeading: Icons.view_list,
             title: 'Powerful Organization',
-            color: Colors.blue,
+            icons: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.view_list, color: Colors.blue),
+                  Icon(Icons.view_list, color: Colors.blue),
+                ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.view_list, color: Colors.blue),
+                  Icon(Icons.view_list, color: Colors.blue),
+                ],
+              ),
+            ],
             subtitle:
                 'Create new lists to match your needs, categorize reminders with tags, and manage reminders around your work flow with Smart Lists'),
         SizedBox(
