@@ -5,18 +5,26 @@ class CustomItemList extends StatelessWidget {
       {super.key,
       required this.iconLeading,
       required this.title,
-      required this.subtitle});
+      required this.subtitle,
+      required this.color});
 
   final IconData iconLeading;
   final String title;
   final String subtitle;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(iconLeading),
-      title: Text(title),
-      subtitle: Text(subtitle),
+      leading: Icon(
+        iconLeading,
+        color: color,
+      ),
+      title: Text(
+        title,
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      subtitle: Text(subtitle, style: TextStyle(color: Colors.grey),),
     );
   }
 }
